@@ -29,25 +29,30 @@ Numbers are pushed on to a stack, and operators work on the stack and push their
 
 The following operators are currently available:
 
-+ removes all the numbers from the stack and pushes their sum, e.g.
+`+` removes all the numbers from the stack and pushes their sum, e.g.
+
     rif 1 2 3 4 5 6 +
     21
 
 Since the output of rif is always the sum of the numbers of the stack, so in the above example the + can be omitted:
+
     rif 1 2 3 4 5 6
     21
 
 
-x (or *) removes all the numbers from the stack and pushes their product, e.g.
+`x` (or `*`) removes all the numbers from the stack and pushes their product, e.g.
+
     rif 1 2 3 4 5 6 x
     720
 
 
-/ pops two numbers from the stack and pushes the result of dividing the first by the second
+`/` pops two numbers from the stack and pushes the result of dividing the first by the second
+
     rif 56 7 /
     8
 
-- negates the number on the top of the stack and replaces it
+`-` negates the number on the top of the stack and replaces it
+
     rif 1 -
     -1
 
