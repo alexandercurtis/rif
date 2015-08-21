@@ -46,7 +46,7 @@ func main() {
 
   for _,s := range argsWithoutProg {
     switch s {
-    case "help": fmt.Println("Functions are + - x / p")
+    case "help": fmt.Println("Functions are + - x / p base %")
     case "-": st.Put( 0 - st.Pop() )
     case "x","*": st.Put( st.Product() )
     case "/": {
@@ -58,6 +58,21 @@ func main() {
     }
     case "p": {
       fmt.Println( st )
+    }
+    case "base": {
+      base := int(st.Pop())
+      value := int(st.Pop())
+      for value > 0 {
+        rem := value % base
+        st.Put( float64(rem) )
+        value = (value-rem) / base
+      }
+      fmt.Println( st )
+    }
+    case "%": {
+      a := int(st.Pop())
+      b := int(st.Pop())
+      st.Put( float64(b % a) )
     }
     default:
       var i,_ = strconv.ParseFloat( s, 64 )
