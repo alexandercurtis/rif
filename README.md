@@ -46,12 +46,12 @@ Since the output of rif is always the sum of the numbers of the stack, so in the
     720
 
 
-`/` pops two numbers from the stack and pushes the result of dividing the first by the second
+`/` pops two numbers from the stack and pushes the result of dividing the second one popped by the first.
 
     rif 56 7 /
     8
 
-`-` pops two numbers from the stack and pushes the result of subtracting the second from the first
+`-` pops two numbers from the stack and pushes the result of subtracting the first one popped from the second.
 
     rif 12 4 -
     8
@@ -61,4 +61,3 @@ Since the output of rif is always the sum of the numbers of the stack, so in the
 
     rif 12 4 - 3 x
     24
-    
