@@ -51,7 +51,7 @@ Since the output of rif is always the sum of the numbers of the stack, so in the
     rif 56 7 /
     8
 
-`-` negates the number on the top of the stack and replaces it
+`-` pops two numbers from the stack and pushes the result of subtracting the second from the first
 
     rif 1 -
     -1
@@ -65,6 +65,6 @@ Since the output of rif is always the sum of the numbers of the stack, so in the
     rif 12 4 - 20 +
     28
 
-
-
-
+    rif 12 4 - 3 x
+    24
+    
