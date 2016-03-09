@@ -47,7 +47,10 @@ func main() {
   for _,s := range argsWithoutProg {
     switch s {
     case "help": fmt.Println("Functions are + - x / p base %")
-    case "-": st.Put( 0 - st.Pop() )
+    case "-": {
+      st.Swap()
+      st.Put( st.Pop() - st.Pop() )
+    }
     case "x","*": st.Put( st.Product() )
     case "/": {
       st.Swap()
@@ -81,5 +84,3 @@ func main() {
   }
   fmt.Println(st.Sum())
 }
-
-
