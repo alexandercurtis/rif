@@ -51,13 +51,19 @@ func main() {
       st.Swap()
       st.Put( st.Pop() - st.Pop() )
     }
-    case "x","*": st.Put( st.Product() )
+    case "P": st.Put( st.Product() )
+    case "x","*": {
+      st.Put( st.Pop() * st.Pop() )
+    }
     case "/": {
       st.Swap()
       st.Put( st.Pop() / st.Pop() )
     }
-    case "+": {
+    case "S": {
       st.Put( st.Sum() )
+    }
+    case "+": {
+      st.Put( st.Pop() + st.Pop() )
     }
     case "p": {
       fmt.Println( st )
